@@ -6,9 +6,14 @@ from django.shortcuts import render,redirect
 from main.models import User,Key
 import hashlib, os
 from django.template import RequestContext
-from forms.GPGForm import GPGFormNew
-from Tools.KeyTools import GenerateKey, prepareInputData
+from forms.GPGForm import GPGFormNew, GPGManage
+from Tools.KeyTools import GenerateKey
+from forms.FileForm import NewFileForm
+def managef(request):
+    form = NewFileForm()
+    form.addForm(request.session['user'])
 
+    return render(request,'base.html',{'message_m':form})
 def manage(request):
     if request.method == 'POST':
         form = GPGFormNew(request.POST)
@@ -18,7 +23,6 @@ def manage(request):
         key_to_save.key_length = 2048
         if not key_to_save.isAlready():
             gpg = RequestContext(request)['gpg']
-
             GenerateKey(key_to_save,gpg).start() #Send gpg and key_to_save objects to another thread to be processed, now we will just send HttpResponse to make them happy
             return render(request,'base.html',{'message_m':'Generating keys will take up to 10 minutes. We will send you notification if its done'})
         else:
@@ -26,7 +30,8 @@ def manage(request):
     else:
         a = Key(key_email=request.session['user'].email,ext_id=request.session['user'],key_length=2048,key_real="Name and surname",key_comment="Additional description for this key",key_password="password")
         form = GPGFormNew(instance=a)
-        return render(request,'manage.html',{'form':form})
+        form_manage = GPGManage().create(request.session['user'])
+        return render(request,'manage.html',{'form':form,'form_manage':form_manage})
 def logout(request):
     if request.session.get('logged',False):
         request.session['logged'] = False

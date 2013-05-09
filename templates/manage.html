@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
     <form action="/main/manage/" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Generate keypair" />
     </form>
+
+    <br /><br/><br/>
+    {% if form_manage %}
+        <form action="/main/manage/" method="POST">
+            {% csrf_token %}
+            {{ form_manage.as_p }}
+            <input type="submit" value="Perform changes" />
+        </form>
+    {% endif %}
 {% endblock %}
