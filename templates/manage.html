@@ -11,7 +11,7 @@
         <form action="/main/manage/" method="POST">
             {% csrf_token %}
             {{ form_manage.as_p }}
-            <input type="submit" value="Perform changes" />
+            <input type="submit" value="Delete key" />
         </form>
     {% endif %}
 {% endblock %}

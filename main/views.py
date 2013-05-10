@@ -15,22 +15,29 @@ def managef(request):
 
     return render(request,'base.html',{'message_m':form})
 def manage(request):
-    if request.method == 'POST':
+    if request.method == 'POST' and 'key_password' in request.POST:
         form = GPGFormNew(request.POST)
         key_to_save = form.save(commit=False)
         key_to_save.ext_id = request.session['user']
         key_to_save.key_type = "RSA"
         key_to_save.key_length = 2048
+        print(request.POST.keys())
         if not key_to_save.isAlready():
             gpg = RequestContext(request)['gpg']
             GenerateKey(key_to_save,gpg).start() #Send gpg and key_to_save objects to another thread to be processed, now we will just send HttpResponse to make them happy
-            return render(request,'base.html',{'message_m':'Generating keys will take up to 10 minutes. We will send you notification if its done'})
+            return render(request,'base.html',{'message_m':'Generating keys will take up to 10 minutes. We will send you notification via email if its done'})
         else:
             return render(request,'base.html',{'message_m':'There is already key with that email'})
+    elif request.method == 'POST' and 'delete' in request.POST:
+        form_manage = GPGManage(post=request.POST)
+        print(form_manage.data['delete'])
+        form_manage.deleteKey(form_manage.data['delete'],RequestContext(request)['gpg'],request.session['user'])
+        return HttpResponse("hehe...")
     else:
         a = Key(key_email=request.session['user'].email,ext_id=request.session['user'],key_length=2048,key_real="Name and surname",key_comment="Additional description for this key",key_password="password")
         form = GPGFormNew(instance=a)
-        form_manage = GPGManage().create(request.session['user'])
+        form_manage = GPGManage(user=request.session['user'])
+        print(request.POST.keys())
         return render(request,'manage.html',{'form':form,'form_manage':form_manage})
 def logout(request):
     if request.session.get('logged',False):

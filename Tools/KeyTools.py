@@ -1,5 +1,6 @@
 __author__ = 'jurek'
 import threading
+from django.core.mail import send_mail
 class GenerateKey(threading.Thread): #Thread in which generating GPG Keys will be performed
     def __init__(self,key_to_save, gpg):
         threading.Thread.__init__(self)
@@ -16,6 +17,8 @@ class GenerateKey(threading.Thread): #Thread in which generating GPG Keys will b
         self.key_to_save.key_fingerprint = fingerprint
         self.find_id()
         self.key_to_save.save()
+
+        # send_mail("Keys have been generated","KEYS ARE READY, YOU NOOB!",'jspendel@gmail.com',[self.key_to_save.key_email],fail_silently=False)
 def prepareInputData(key,gpg):
     result = gpg.gen_key_input(key_type=key.key_type,key_length=key.key_length,name_real=key.key_real,name_comment=key.key_comment,name_email=key.key_email,passphrase=key.key_password)
     return result
