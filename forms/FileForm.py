@@ -2,13 +2,11 @@ __author__ = 'jurek'
 from django import forms
 from main.models import User,Key
 class NewFileForm(forms.Form):
+    file = forms.FileField()
+
     def addForm(self,user):
         choices = []
         keys = Key.objects.filter(ext_id=user)
         for key in keys:
-            choices.append([None,key.key_email])
-        counter = 1
-        for choice in choices:
-            choice[0] = counter
-            counter = counter + 1
+            choices.append([key.key_email,key.key_email])
         self.fields['opcje'] = forms.ChoiceField(choices=choices)

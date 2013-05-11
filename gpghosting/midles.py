@@ -1,8 +1,7 @@
 __author__ = 'jurek'
-import re
+import re, gnupg
 from django.shortcuts import redirect
 from django.http import HttpResponseForbidden
-import gnupg
 from django.conf import settings
 class Sesja(object):
     def process_request(self,request):

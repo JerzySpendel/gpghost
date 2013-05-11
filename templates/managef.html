@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if file_form %}
+        <form enctype="multipart/form-data" method="POST" action="/main/managef/">
+        {% csrf_token %}
+            Key: {{ file_form.opcje }}
+            <br/>
+            File: {{ file_form.file }}
+            <br/>
+            <input type="submit" value="Upload" />
+        </form>
+    {% endif %}
+{% endblock %}

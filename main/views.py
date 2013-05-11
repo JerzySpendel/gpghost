@@ -9,11 +9,17 @@ from django.template import RequestContext
 from forms.GPGForm import GPGFormNew, GPGManage
 from Tools.KeyTools import GenerateKey
 from forms.FileForm import NewFileForm
+from Tools.UploadTools import handle_file
 def managef(request):
-    form = NewFileForm()
-    form.addForm(request.session['user'])
-
-    return render(request,'base.html',{'message_m':form})
+    if request.method == "POST":
+        form = NewFileForm(request.POST,request.FILES)
+        if form.is_valid():
+            handle_file(request.FILES['file'],request.session['user'])
+            return HttpResponse("hehehhehehe")
+    else:
+        form = NewFileForm()
+        form.addForm(request.session['user'])
+        return render(request,'managef.html',{'file_form':form})
 def manage(request):
     if request.method == 'POST' and 'key_password' in request.POST:
         form = GPGFormNew(request.POST)
@@ -32,7 +38,7 @@ def manage(request):
         form_manage = GPGManage(post=request.POST)
         print(form_manage.data['delete'])
         form_manage.deleteKey(form_manage.data['delete'],RequestContext(request)['gpg'],request.session['user'])
-        return HttpResponse("hehe...")
+        return render(request,'base.html',{'messagem_m':'Key deleted'})
     else:
         a = Key(key_email=request.session['user'].email,ext_id=request.session['user'],key_length=2048,key_real="Name and surname",key_comment="Additional description for this key",key_password="password")
         form = GPGFormNew(instance=a)
@@ -86,7 +92,8 @@ def register(request):
             if not User.objects.filter(login=login).count():
                 user = User.objects.create(login=login,password=password,email=email)
                 user.save()
-                os.mkdir('/home/jurek/PycharmProjects/gpghosting/files/'+login)
+                if not os.path.exists('/home/jurek/PycharmProjects/gpghosting/files/'+login):
+                    os.mkdir('/home/jurek/PycharmProjects/gpghosting/files/'+login)
                 return render(request,'gratz.html',{'login':login,'gratulowac':True})
             else:
                 return render(request,'gratz.html',{'gratulowac':False})
