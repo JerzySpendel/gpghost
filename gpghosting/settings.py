@@ -1,7 +1,8 @@
 # Django settings for gpghosting project.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-GNUPGHOME = '/home/jurek/PycharmProjects/gpghosting/klucze'
+GNUPGHOME = '/home/jurek/PycharmProjects/gpghosting/klucze/'
+PATH = '/home/jurek/PycharmProjects/gpghosting/'
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
