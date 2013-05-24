@@ -8,8 +8,10 @@ import hashlib, os
 from django.template import RequestContext
 from forms.GPGForm import GPGFormNew, GPGManage
 from Tools.KeyTools import GenerateKey
-from forms.FileForm import NewFileForm
+from forms.FileForm import NewFileForm,ManageForm
 from Tools.FileTools import handle_file,listFiles
+from Tools.Tools import toPairs
+from django import forms
 def managef(request):
     if request.method == "POST":
         form = NewFileForm(request.POST,request.FILES)
@@ -53,7 +55,6 @@ def logout(request):
     else:
         return render(request,'base.html',{'message_m':"You're not logged in"})
 def index(request):
-
     return render(request,"index.html",{})
 def login(request):
     if request.method == 'POST':
@@ -101,5 +102,12 @@ def register(request):
     else:
         return render(request,'register.html',{'form':RegisterForm})
 def main(request):
-    listFiles(request.session['user'])
-    return render(request,"main.html")
+    if request.method == "POST":
+        form = ManageForm(post=request.POST,user=request.session['user'])
+        for data in form.data:
+            print(data)
+        return HttpResponse("test")
+    else:
+        form = ManageForm()
+        form.addForm(request.session['user'])
+    return render(request,"main.html",{'forms':form})

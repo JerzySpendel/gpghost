@@ -9,4 +9,4 @@ def handle_file(f,user):
 def listFiles(user):
     path_to_files = settings.PATH
     user_path = path_to_files + 'files/'+user.login
-    return os.listdir(user_path)
+    return [file for file in os.listdir(user_path) if not file.startswith(".")]

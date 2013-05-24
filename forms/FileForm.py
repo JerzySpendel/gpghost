@@ -4,7 +4,6 @@ from main.models import User,Key
 from Tools.FileTools import listFiles
 class NewFileForm(forms.Form):
     file = forms.FileField()
-
     def addForm(self,user):
         choices = []
         keys = Key.objects.filter(ext_id=user)
@@ -12,9 +11,12 @@ class NewFileForm(forms.Form):
             choices.append([key.key_email,key.key_email])
         self.fields['opcje'] = forms.ChoiceField(choices=choices)
 class ManageForm(forms.Form):
-    def __init__(self,user):
-        forms.Form.__init__(self)
+    def __init__(self,post=None,user=None):
+        forms.Form.__init__(self,post)
+        if user != None:
+            self.addForm(user)
+    def addForm(self,user):
         self.user = user
-    def addForm(self):
-        files = listFiles(self.user.login)
-
+        files = listFiles(self.user)
+        for file in files:
+            self.fields[file] = forms.BooleanField(label=file)

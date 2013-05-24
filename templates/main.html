@@ -4,30 +4,31 @@
     <br />
     <a href="main/managef">Upload your files</a>
     <br/> <br/>
-    <table>
-    <tr>
-        <td>
-            File name
-        </td>
-        <th colspan=3>
-            Action
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Pliczekfiles
-        </td>
-        <td>
-            Deletefiles
-        </td>
-        <td>
-            Decrypt
-        </td>
-        <td>
-            Rename
-        </td>
-    </tr>
+    <table border=2>
+        <form action="main" method="POST">
+            {% csrf_token %}
+            <tr>
+                <td rowspan=2>Name</td>
+                <td colspan=3><p style="text-align:center">Action</p></td>
+            </tr>
+            <tr>
+                <td>Delete</td>
+                <td>Decrypt</td>
+                <td>Rename</td>
+            </tr>
+            {% for field in forms %}
+                <tr>
+                    <td>
+                        {{ field.label }}
+                    </td>
+                    <td>
+                        {{ field }}
+                    </td>
+                </tr>
+            {% endfor %}
     </table>
+    <input type="submit" value="OK" />
+    </form>
     <br />
     <br/>
     <br/>
