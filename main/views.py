@@ -10,8 +10,7 @@ from forms.GPGForm import GPGFormNew, GPGManage
 from Tools.KeyTools import GenerateKey
 from forms.FileForm import NewFileForm,ManageForm
 from Tools.FileTools import handle_file,listFiles
-from Tools.Tools import toPairs
-from django import forms
+from Tools import Tools
 def managef(request):
     if request.method == "POST":
         form = NewFileForm(request.POST,request.FILES)
@@ -104,9 +103,8 @@ def register(request):
 def main(request):
     if request.method == "POST":
         form = ManageForm(post=request.POST,user=request.session['user'])
-        for data in form.data:
-            print(data)
-        return HttpResponse("test")
+        Tools.deleteGivenFiles(form.data,request)
+        return render(request,'base.html',{'message_m':'Files deleted'})
     else:
         form = ManageForm()
         form.addForm(request.session['user'])
