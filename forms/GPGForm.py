@@ -24,6 +24,6 @@ class GPGManage(forms.Form):
     def deleteKey(self,number,gpg,user):
         self.keys = models.Key.objects.filter(ext_id=user)
         key = self.keys[int(number)-1]
-        gpg.delete_keys(key.key_fingerprint)
-        gpg.delete_keys(key.key_fingerprint,True)
+        print(gpg.delete_keys(key.key_fingerprint,True))
+        print(gpg.delete_keys(key.key_fingerprint))
         key.delete()

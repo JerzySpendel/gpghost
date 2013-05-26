@@ -2,10 +2,12 @@
 {% block content %}
     {% if file_form %}
         <form enctype="multipart/form-data" method="POST" action="/main/managef/">
-        {% csrf_token %}
+            {% csrf_token %}
             Key: {{ file_form.opcje }}
             <br/>
             File: {{ file_form.file }}
+            <br/>
+            Password to encrypt: {{ file_form.password }}
             <br/>
             <input type="submit" value="Upload" />
         </form>

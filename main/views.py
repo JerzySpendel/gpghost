@@ -16,8 +16,9 @@ def managef(request):
     if request.method == "POST":
         form = NewFileForm(request.POST,request.FILES)
         if form.is_valid():
-            handle_file(request.FILES['file'],request.session['user'])
-            return HttpResponse("hehehhehehe")
+            print(form.data['opcje'])
+            handle_file(request.FILES['file'],request.session['user'],form.data['opcje'],request,form.data['password'])
+            return render(request,'base.html',{'message_m':'File has been uploaded, nice.'})
     else:
         form = NewFileForm()
         form.addForm(request.session['user'])

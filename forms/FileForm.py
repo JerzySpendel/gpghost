@@ -10,6 +10,7 @@ class NewFileForm(forms.Form):
         for key in keys:
             choices.append([key.key_email,key.key_email])
         self.fields['opcje'] = forms.ChoiceField(choices=choices)
+        self.fields['password'] = forms.CharField(max_length=100)
 class DeleteForm(forms.Form):
     def __init__(self,post=None,user=None):
         forms.Form.__init__(self,post)

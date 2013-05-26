@@ -8,12 +8,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/klucze/trustdb.gpg" afterPath="$PROJECT_DIR$/klucze/trustdb.gpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/FileForm.py" afterPath="$PROJECT_DIR$/forms/FileForm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tools/FileTools.py" afterPath="$PROJECT_DIR$/Tools/FileTools.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tools/Tools.py" afterPath="$PROJECT_DIR$/Tools/Tools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/GPGForm.py" afterPath="$PROJECT_DIR$/forms/GPGForm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baza.db" afterPath="$PROJECT_DIR$/baza.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/main.html" afterPath="$PROJECT_DIR$/templates/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gpghosting/midles.py" afterPath="$PROJECT_DIR$/gpghosting/midles.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gpghosting/settings.py" afterPath="$PROJECT_DIR$/gpghosting/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gpghosting/urls.py" afterPath="$PROJECT_DIR$/gpghosting/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/managef.html" afterPath="$PROJECT_DIR$/templates/managef.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -22,7 +20,7 @@
     <file path="/models.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368041765546" ignored="false" />
     <file path="/settings.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369523060906" ignored="false" />
     <file path="/urls.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369522503137" ignored="false" />
-    <file path="/views.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369578608669" ignored="false" />
+    <file path="/views.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369603485786" ignored="false" />
     <file path="/register.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367782807427" ignored="false" />
     <file path="/register.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367940253344" ignored="false" />
     <file path="/gratz.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367932157783" ignored="false" />
@@ -30,20 +28,20 @@
     <file path="/login.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367776375552" ignored="false" />
     <file path="/index.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367782751827" ignored="false" />
     <file path="/login.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367783837956" ignored="false" />
-    <file path="/main.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369569529366" ignored="false" />
+    <file path="/main.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369585913778" ignored="false" />
     <file path="/midles.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369570356777" ignored="false" />
     <file path="/manage.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368133861932" ignored="false" />
     <file path="/GPGFormNew.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367937820643" ignored="false" />
     <file path="/KeyTools.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368212675033" ignored="false" />
     <file path="/upload.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1367959532762" ignored="false" />
-    <file path="/GPGForm.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368212253448" ignored="false" />
-    <file path="/FileForm.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369517668787" ignored="false" />
-    <file path="/Dummy.txt" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369578615144" ignored="false" />
+    <file path="/GPGForm.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369593315182" ignored="false" />
+    <file path="/FileForm.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369603307496" ignored="false" />
+    <file path="/Dummy.txt" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369584932311" ignored="false" />
     <file path="/index.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368115699989" ignored="false" />
-    <file path="/managef.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368294456302" ignored="false" />
+    <file path="/managef.html" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369603365413" ignored="false" />
     <file path="/UploadTools.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368296645003" ignored="false" />
     <file path="/tests.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368531561595" ignored="false" />
-    <file path="/FileTools.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369523476694" ignored="false" />
+    <file path="/FileTools.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1369606219767" ignored="false" />
     <file path="/calka.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368555352797" ignored="false" />
     <file path="/pep.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368647262105" ignored="false" />
     <file path="/aur.py" changelist="8af1dbb5-966d-4615-af92-1e0d77420ef2" time="1368725243261" ignored="false" />
@@ -68,19 +66,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="19" selection-start="1048" selection-end="1048" vertical-scroll-proportion="-13.583333">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="4" selection-start="6174" selection-end="6174" vertical-scroll-proportion="0.8076923">
+            <state line="19" column="43" selection-start="722" selection-end="726" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -88,40 +77,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpghosting/urls.py">
+      <file leaf-file-name="FileTools.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tools/FileTools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="midles.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpghosting/midles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="22" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0">
+            <state line="28" column="16" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.87318087">
               <folding>
-                <element signature="e#21#37#0" expanded="true" />
+                <element signature="e#21#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileTools.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tools/FileTools.py">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="35" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+            <state line="14" column="38" selection-start="537" selection-end="546" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tools.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tools/Tools.py">
+      <file leaf-file-name="FileForm.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forms/FileForm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="12" column="45" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#21#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,22 +126,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/managef.html" />
-        <option value="$PROJECT_DIR$/Tools/UploadTools.py" />
-        <option value="$PROJECT_DIR$/main/tests.py" />
         <option value="$PROJECT_DIR$/../Calka/calka.py" />
         <option value="$PROJECT_DIR$/../PEP/pep.py" />
         <option value="$PROJECT_DIR$/../aur/aur.py" />
         <option value="$PROJECT_DIR$/../test/inner.py" />
         <option value="$PROJECT_DIR$/../test/plik" />
-        <option value="$PROJECT_DIR$/forms/FileForm.py" />
         <option value="$PROJECT_DIR$/gpghosting/settings.py" />
         <option value="$PROJECT_DIR$/Tools/Tools.py" />
-        <option value="$PROJECT_DIR$/templates/main.html" />
-        <option value="$PROJECT_DIR$/Tools/FileTools.py" />
         <option value="$PROJECT_DIR$/gpghosting/urls.py" />
         <option value="$PROJECT_DIR$/gpghosting/midles.py" />
+        <option value="$PROJECT_DIR$/templates/main.html" />
+        <option value="$PROJECT_DIR$/forms/GPGForm.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/forms/FileForm.py" />
+        <option value="$PROJECT_DIR$/templates/managef.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/Tools/FileTools.py" />
       </list>
     </option>
   </component>
@@ -323,13 +305,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -502,7 +484,11 @@
       <created>1369435146416</created>
       <updated>1369435146416</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Deleting is working properly.">
+      <created>1369578643921</created>
+      <updated>1369578643921</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -533,7 +519,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32784638" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38450503" sideWeight="0.6888587" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21449067" sideWeight="0.6888587" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3218707" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -624,81 +610,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/forms/register.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpghosting/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpghosting/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forms/GPGForm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="984" selection-end="987" vertical-scroll-proportion="0.7193347" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forms/FileForm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="62" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpghosting/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tools/Tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="24" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="19" selection-start="1048" selection-end="1048" vertical-scroll-proportion="-13.583333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tools/FileTools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -713,17 +632,89 @@
     <entry file="file://$PROJECT_DIR$/gpghosting/midles.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="22" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#37#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="65" selection-start="421" selection-end="427" vertical-scroll-proportion="0.36105034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/GPGForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="33" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="250" selection-end="257" vertical-scroll-proportion="0.29540482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpghosting/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/managef.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="468" selection-end="468" vertical-scroll-proportion="0.4595186">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="4" selection-start="6174" selection-end="6174" vertical-scroll-proportion="0.8076923">
+        <state line="19" column="43" selection-start="722" selection-end="726" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/FileForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="45" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="38" selection-start="537" selection-end="546" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tools/FileTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="16" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.87318087">
+          <folding>
+            <element signature="e#21#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
