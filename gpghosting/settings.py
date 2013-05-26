@@ -2,6 +2,7 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 GNUPGHOME = '/home/jurek/PycharmProjects/gpghosting/klucze/'
+LINK = 'http://localhost:8000/'
 PATH = '/home/jurek/PycharmProjects/gpghosting/'
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),

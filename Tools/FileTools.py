@@ -10,3 +10,15 @@ def listFiles(user):
     path_to_files = settings.PATH
     user_path = path_to_files + 'files/'+user.login
     return [file for file in os.listdir(user_path) if not file.startswith(".")]
+def getUserFilePath(user):
+    login = user.login
+    return settings.PATH+'files/'+login+'/'
+def prepareLinks(user,form):
+    names = [name.label for name in form]
+    login = user.login
+    link = settings.LINK
+    links = []
+    for name in names:
+        links.append(link+'download/?u='+login+'&f='+name)
+    return links
+

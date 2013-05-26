@@ -10,7 +10,7 @@ class NewFileForm(forms.Form):
         for key in keys:
             choices.append([key.key_email,key.key_email])
         self.fields['opcje'] = forms.ChoiceField(choices=choices)
-class ManageForm(forms.Form):
+class DeleteForm(forms.Form):
     def __init__(self,post=None,user=None):
         forms.Form.__init__(self,post)
         if user != None:
@@ -18,5 +18,15 @@ class ManageForm(forms.Form):
     def addForm(self,user):
         self.user = user
         files = listFiles(self.user)
+        for file in files:
+            self.fields[file] = forms.BooleanField(label=file)
+class RenameForm(forms.Form):
+    def __init__(self,post=None,user=None):
+        forms.Form.__init__(self,post)
+        if user != None:
+            self.addForm(user)
+    def addForm(self,user):
+        self.user = user
+        files = listFiles(user)
         for file in files:
             self.fields[file] = forms.BooleanField(label=file)

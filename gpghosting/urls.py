@@ -12,5 +12,6 @@ urlpatterns = patterns('',
     url(r'^main$','main.views.main'),
     url(r'^main/manage/$','main.views.manage'),
     url(r'^main/managef/$','main.views.managef'),
-    url(r'^main/logout/$','main.views.logout')
+    url(r'^main/logout/$','main.views.logout'),
+    url(r'^download/','main.views.download')
 )

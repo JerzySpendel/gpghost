@@ -9,20 +9,30 @@
             {% csrf_token %}
             <tr>
                 <td rowspan=2>Name</td>
-                <td colspan=3><p style="text-align:center">Action</p></td>
+                <td colspan=4><p style="text-align:center">Action</p></td>
             </tr>
             <tr>
                 <td>Delete</td>
                 <td>Decrypt</td>
                 <td>Rename</td>
+                <td>Download</td>
             </tr>
             {% for field in forms %}
                 <tr>
                     <td>
-                        {{ field.label }}
+                        {{ field.0.label }}
                     </td>
                     <td>
-                        {{ field }}
+                        {{ field.0 }}
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        {{ field.1 }}
+                    </td>
+                    <td>
+                        <a href="{{ field.2 }}">Download</a>
                     </td>
                 </tr>
             {% endfor %}

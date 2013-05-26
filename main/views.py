@@ -1,4 +1,4 @@
-# Create your views here.
+from django.conf import settings
 from django.http import HttpResponse
 from forms.register import RegisterForm
 from forms.login import LoginForm
@@ -8,9 +8,10 @@ import hashlib, os
 from django.template import RequestContext
 from forms.GPGForm import GPGFormNew, GPGManage
 from Tools.KeyTools import GenerateKey
-from forms.FileForm import NewFileForm,ManageForm
-from Tools.FileTools import handle_file,listFiles
+from forms.FileForm import *
+from Tools.FileTools import *
 from Tools import Tools
+from django.core.servers.basehttp import FileWrapper
 def managef(request):
     if request.method == "POST":
         form = NewFileForm(request.POST,request.FILES)
@@ -102,10 +103,22 @@ def register(request):
         return render(request,'register.html',{'form':RegisterForm})
 def main(request):
     if request.method == "POST":
-        form = ManageForm(post=request.POST,user=request.session['user'])
-        Tools.deleteGivenFiles(form.data,request)
+        form = DeleteForm(post=request.POST,user=request.session['user'])
+        Tools.deleteGivenFiles(form.data,request) #Deleting files from data in form.data and finding in which folder from session in request
         return render(request,'base.html',{'message_m':'Files deleted'})
     else:
-        form = ManageForm()
-        form.addForm(request.session['user'])
-    return render(request,"main.html",{'forms':form})
+        formD = DeleteForm()
+        formR = RenameForm()
+        formR.addForm(request.session['user'])
+        formD.addForm(request.session['user'])
+        linki = prepareLinks(request.session['user'],formD)
+        forms = Tools.toTriples(formD,formR,linki)
+    return render(request,"main.html",{'forms':forms,'formD':formD,'formR':formR})
+def download(request):
+    login = request.GET['u'] #user = login
+    file = request.GET['f'] #name of file
+    path = settings.PATH+'files/'+login+'/'+file #path to this file
+    response = HttpResponse(open(path,'rb'),content_type='application/octet-stream')
+    response['Content-Disposition'] = 'attachment; filename="'+file+'"' #Setting name of file in response header
+    return response
+#lol
