@@ -8,6 +8,7 @@
         <form action="main" method="POST">
             {% csrf_token %}
             <tr>
+                <td rowspan=2>sec</td>
                 <td rowspan=2>Name</td>
                 <td colspan=4><p style="text-align:center">Action</p></td>
             </tr>
@@ -17,8 +18,13 @@
                 <td>Rename</td>
                 <td>Download</td>
             </tr>
-            {% for field in forms %}
+            {% for field in D %}
                 <tr>
+                    <td>
+                        {% if field.0.sec %}
+                            <img src='http://img27.imageshack.us/img27/4472/locksi.png'/>
+                        {% endif %}
+                    </td>
                     <td>
                         {{ field.0.label }}
                     </td>

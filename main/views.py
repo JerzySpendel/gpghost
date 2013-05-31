@@ -112,9 +112,10 @@ def main(request):
         formR = RenameForm()
         formR.addForm(request.session['user'])
         formD.addForm(request.session['user'])
-        linki = prepareLinks(request.session['user'],formD)
-        forms = Tools.toTriples(formD,formR,linki)
-    return render(request,"main.html",{'forms':forms,'formD':formD,'formR':formR})
+        linki = prepareLinks(request.session['user'],formD) #creates links to download for each file
+        display = Tools.Display(formD=formD,formR=formR,links=linki)
+
+    return render(request,"main.html",{'D':display})
 def download(request):
     login = request.GET['u'] #user = login
     file = request.GET['f'] #name of file

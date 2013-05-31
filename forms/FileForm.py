@@ -21,6 +21,12 @@ class DeleteForm(forms.Form):
         files = listFiles(self.user)
         for file in files:
             self.fields[file] = forms.BooleanField(label=file)
+    def __len__(self):
+        i = iter(self)
+        counter = 0
+        for a in i:
+            counter += 1
+        return counter
 class RenameForm(forms.Form):
     def __init__(self,post=None,user=None):
         forms.Form.__init__(self,post)
@@ -31,3 +37,9 @@ class RenameForm(forms.Form):
         files = listFiles(user)
         for file in files:
             self.fields[file] = forms.BooleanField(label=file)
+    def __len__(self):
+        i = iter(self)
+        counter = 0
+        for a in i:
+            counter += 1
+        return counter
