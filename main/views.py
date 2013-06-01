@@ -12,7 +12,7 @@ from forms.FileForm import *
 from Tools.FileTools import *
 from Tools import Tools
 from django.core.servers.basehttp import FileWrapper
-def managef(request):
+def managef(request):  #View for uploading files
     if request.method == "POST":
         form = NewFileForm(request.POST,request.FILES)
         if form.is_valid():
@@ -46,7 +46,6 @@ def manage(request):
         a = Key(key_email=request.session['user'].email,ext_id=request.session['user'],key_length=2048,key_real="Name and surname",key_comment="Additional description for this key",key_password="password")
         form = GPGFormNew(instance=a)
         form_manage = GPGManage(user=request.session['user'])
-        print(request.POST.keys())
         return render(request,'manage.html',{'form':form,'form_manage':form_manage})
 def logout(request):
     if request.session.get('logged',False):

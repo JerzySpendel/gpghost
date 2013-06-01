@@ -7,11 +7,15 @@
     </form>
 
     <br /><br/><br/>
-    {% if form_manage %}
-        <form action="/main/manage/" method="POST">
-            {% csrf_token %}
-            {{ form_manage.as_p }}
-            <input type="submit" value="Delete key" />
-        </form>
-    {% endif %}
+    <table>
+        {% if form_manage %}
+            <form action="/main/manage/" method="POST">
+                {% csrf_token %}
+                {% for field in D %}
+
+                {% endfor %}
+                <input type="submit" value="Delete key" />
+            </form>
+        {% endif %}
+    </table>
 {% endblock %}

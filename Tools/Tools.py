@@ -1,7 +1,7 @@
 __author__ = 'jurek'
 from django.conf import settings
 import os
-class Display(object):  #class for displaying uniform set of rename for, delete form and links
+class Display(object):  #class for displaying uniform set of rename for, delete form and links, in other words just wrapper for data to display in view :}
     def __init__(self,**kvars):
         if 'formR' in kvars:
             self.formR = kvars['formR']
@@ -32,10 +32,10 @@ class Display(object):  #class for displaying uniform set of rename for, delete 
         self.curIR = r
         self.curIL = l
         return (d,r,l)
-    def nextR(self):
+    def nextR(self):  #next rename form got from self.iR iterator
         self.curIR = next(self.iR)
         return self.curIR
-    def nextD(self):
+    def nextD(self):  #next delete form got from self.iD iterator
         n = next(self.iD)
         if n.label.count('.pgp') >= 1:
             n.sec = True
@@ -43,7 +43,7 @@ class Display(object):  #class for displaying uniform set of rename for, delete 
             n.sec = False
         self.curID = n
         return n
-    def nextLink(self):
+    def nextLink(self):  #next link got from self.iL iterator
         self.curIL = next(self.iL)
         return self.curIR
     def __iter__(self):
@@ -54,15 +54,12 @@ class Display(object):  #class for displaying uniform set of rename for, delete 
         if self.formR and self.formD and self.links:
             if len(self.formR) != len(self.formD) and (len(self.formR) != len(self.links)):
                 raise Exception('Different sizes between formR,formD and links')
+# "data" argument is data from form (form.data) containing
+# information about selected pools
+# request is request object which contain user info
 def deleteGivenFiles(data,request):
     login = request.session['user'].login
     path = settings.PATH+'files/'+login+'/'
     for file in data:
         if file != 'csrfmiddlewaretoken':
             os.remove(path+file)
-def sec(form):
-    for field in form:
-        if field.label.count('.pgp') >= 1:
-            field.sec = True
-        else:
-            field.sec = False
