@@ -112,7 +112,13 @@ def main(request):
         formR.addForm(request.session['user'])
         formD.addForm(request.session['user'])
         linki = prepareLinks(request.session['user'],formD) #creates links to download for each file
-        display = Tools.Display(formD=formD,formR=formR,links=linki)
+
+        from collections import OrderedDict
+        parameters = OrderedDict()
+        parameters['formD'] = formD
+        parameters['formR'] = formR
+        parameters['links'] = linki
+        display = Tools.Display(parameters)
 
     return render(request,"main.html",{'D':display})
 def download(request):
