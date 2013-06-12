@@ -1,10 +1,12 @@
 __author__ = 'jurek'
 from django.conf import settings
 import os
+from collections import OrderedDict
 class Display(object):  #class for displaying uniform set of rename for, delete form and links, in other words just wrapper for data to display in view :}
     def __init__(self,kvars):
-        self.forms = {}  #set for forms
-        self.iters = {}  #set for iterators got from self.forms
+        print('kvars: ',kvars)
+        self.forms = OrderedDict()  #set for forms
+        self.iters = OrderedDict()  #set for iterators got from self.forms
         for i in kvars.keys():
             self.forms[i] = kvars[i]
             self.iters[i] = iter(self.forms[i])

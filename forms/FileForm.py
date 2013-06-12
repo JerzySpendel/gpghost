@@ -4,6 +4,7 @@ from main.models import User,Key
 from Tools.FileTools import listFiles
 class NewFileForm(forms.Form):
     file = forms.FileField()
+    addDecrypt = forms.BooleanField()
     def addForm(self,user):
         choices = []
         keys = Key.objects.filter(ext_id=user)
